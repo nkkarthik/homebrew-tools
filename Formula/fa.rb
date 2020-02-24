@@ -2,15 +2,16 @@ class Fa < Formula
   desc "fa tools"
   homepage "https://github.com/nkkarthik/fa"
   #url "https://github.com/nkkarthik/travistest"
+  url "https://github.com/nkkarthik/fa", :using => :git
   version "0.1.3"
   #sha256 "b18d6ed4a662f8b9fbf27eaec87b083ba1294fe5e0702e92f2881e3d6af1c33e"
 
-  head "https://github.com/nkkarthik/fa.git"
+  #head "https://github.com/nkkarthik/fa.git"
 
   bottle :unneeded
 
   def install
-    mix escript.build
+    system "mix", "escript.build"
     libexec.install Dir["*"]
     #bin.write_jar_script libexec/"davmail.jar", "davmail", "-Djava.awt.headless=true"
   end
