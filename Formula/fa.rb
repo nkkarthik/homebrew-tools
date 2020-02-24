@@ -12,7 +12,7 @@ class Fa < Formula
 
   def install
     system "mix", "escript.build"
-    libexec.install Dir["*"]
+    #libexec.install Dir["*"]
     #bin.write_jar_script libexec/"davmail.jar", "davmail", "-Djava.awt.headless=true"
   end
 
