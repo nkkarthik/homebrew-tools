@@ -12,11 +12,12 @@ class Fa < Formula
 
   def install
     system "mix", "escript.build"
+    bin.install "fa"
     #libexec.install Dir["*"]
     #bin.write_jar_script libexec/"davmail.jar", "davmail", "-Djava.awt.headless=true"
   end
 
-  plist_options :manual => "davmail"
+  plist_options :startup => false, :manual => "fa devserver"
 
   def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
