@@ -13,6 +13,7 @@ class Fa < Formula
     system "mix", "local.hex", "--force"
     system "mix", "local.rebar", "--force"
     system "mix", "deps.get"
+    system "mix", "deps.compile"
     system "mix", "escript.build"
     bin.install "fa"
     libexec.install Dir["*"]
