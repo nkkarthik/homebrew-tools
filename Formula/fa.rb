@@ -15,8 +15,8 @@ class Fa < Formula
     system "mix", "deps.get"
     #system "mix", "archive.install", "--force" hex phx_new 1.4.12
     system "mix", "escript.build"
-    #bin.install "fa"
-    #libexec.install Dir["*"]
+    bin.install "fa"
+    libexec.install Dir["*"]
     #bin.write_jar_script libexec/"davmail.jar", "davmail", "-Djava.awt.headless=true"
   end
 
